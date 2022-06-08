@@ -1,28 +1,118 @@
-// filter and map methods
+// // fetch api and promises
 
-const ninjas = [ 
-    {name: 'shaun', belt:'black'},
-    {name: 'mario', belt:'orange'},
-    {name: 'yoshi', belt:'black'},
-    {name: 'luigi', belt:'green'}
-]
+// this will fire first, but finish second
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((res) => res.json())
+    .then((json) => console.log(json))
 
 
-// filter method: filter items out, non-destructive
-const blackBelts = ninjas.filter((ninja) => {
-    return ninja.belt == 'black'
-})
-
-console.log(blackBelts);
+    //this fires second whilst the first is running
+    console.log('hello');
 
 
-// map method
 
-const names = ninjas.map((ninja) => {
-    return ninja.name
-})
 
-console.log(names);
+
+// // asynnc and await
+
+// const getTodo = () => {
+//     fetch('https://jsonplaceholder.typicode.com/todos/1')
+//         .then((res) => res.json)
+//         .then((data) => console.log(data))
+// }
+
+// const getodo = async () => {
+//    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//    const data = await response.json()
+//    console.log(data);
+// }
+
+// getTodo()
+
+// getodo()
+
+
+
+
+// Arrow functions = () => {}
+
+// // old style:
+// function greetOne() {
+//     console.log('hello');
+// }
+
+// const greetTwo = () => {
+//     console.log('hello again');
+// }
+
+// // invoke the functions:
+// greetOne()
+
+// greetTwo()
+
+// names.map(() => 'hello')
+
+
+// // template strings
+// const name = 'shaun'
+// const job = 'developer'
+
+// const string = `Hi, my name is ${name} and I am a ${job}`
+
+// console.log(string);
+
+// console.log('Hello my name is ' + name + ', and my job is a ' + job )
+
+// console.log(`Hello my name is ${name} and my job is a ${job}`);
+
+
+
+
+// // // spread syntax:
+
+// const ninjas = ['shaun', 'mario', 'peach']
+// const blog = { title: 'new blog', author: 'bowser' }
+
+// // console.log(...ninjas)
+
+// const idBlog = {...blog, id: 1}
+
+// console.log(idBlog);
+
+
+
+
+
+
+// // filter and map methods
+
+// const ninjas = [ 
+//     {name: 'shaun', belt:'black'},
+//     {name: 'mario', belt:'orange'},
+//     {name: 'yoshi', belt:'black'},
+//     {name: 'luigi', belt:'green'}
+// ]
+
+
+// // filter method: filter items out, non-destructive
+// const blackBelts = ninjas.filter((ninja) => {
+//     return ninja.belt == 'black'
+// })
+
+// console.log(blackBelts);
+
+
+// // map method
+
+// const names = ninjas.map((ninja) => {
+//     return ninja.name
+// })
+
+// console.log(names);
+
+
+
+// import and export
 
 // import { ninjas, greet } from './ninjas.js'
 
@@ -31,6 +121,12 @@ console.log(names);
 
 // greet()
 
+
+
+
+
+
+// destructuring:
 
 // // const person = {
 // //     firstName: 'yoshi',
@@ -56,7 +152,6 @@ console.log(names);
 // // const [a,b,c] = nums
 
 // // console.log(a,b,c,b,a)
-
 
 
 // // const getCalculations = (a,b) => {
